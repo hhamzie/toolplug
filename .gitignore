@@ -1,0 +1,10 @@
+node_modules/
+.dist/
+dist/
+.build/
+.next/
+.vercel/
+.env
+.env.*
+wrangler.toml.secret
+.DS_Store

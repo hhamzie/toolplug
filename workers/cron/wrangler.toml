@@ -1,0 +1,25 @@
+name = "toolplug-cron"          # different from your Pages project name
+main = "src/index.ts"
+compatibility_date = "2025-09-07"
+workers_dev = true
+OMAIN = "toolplug.xyz"
+
+[triggers]
+crons = [
+  "0 * * * *",      # HOURLY: gate 2pm ET daily sends in code (DST-safe)
+  "5 5 * * 1",      # WEEKLY: Mondays 05:05 UTC (~00:05/01:05 ET)
+  "10 5 1 * *"      # MONTHLY: 1st @ 05:10 UTC (~00:10/01:10 ET)
+]
+
+# Mirror any data bindings your called endpoints need (DB is managed in CF dashboard)
+[[d1_databases]]
+binding = "DB"
+database_name = "toolplug_db"
+database_id = "a88946a8-4259-475b-bd7c-9fd497d3f7be"
+
+[vars]
+DOMAIN = "toolplug.xyz"
+ADMIN_API_KEY = "e78cf38051131b73dc481916bded040a10b167519e4eacdc06b1e120256a1a55"
+
+[ai]
+binding = "AI"   # included for parity; your endpoints use Workers AI

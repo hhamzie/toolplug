@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToolPlug - Discover creativity & innovation ONCE weekly 🔌 ⚡ </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Hero Section -->
+        <section id="hero" class="step active">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-emoji-row">
+                        <span class="hero-emoji">🛠️</span>
+                        <span class="hero-emoji">⚡</span>
+                        <span class="hero-emoji">🔌</span>
+                        <span class="hero-emoji">💡</span>
+                        <span class="hero-emoji">🚀</span>
+                    </div>
+                    <h1 class="hero-title">ToolPlug</h1>
+                    <p class="hero-tagline">Discover creativity & innovation ONCE weekly 🔌</p>
+                    <p class="hero-description">Get ONE curated software tool delivered to your inbox based on your interests</p>
+
+                    
+                    <button class="btn btn--primary btn--lg" id="start-btn">Start Discovering Tools</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category Selection Section -->
+        <section id="categories" class="step">
+            <div class="container">
+                <div class="step-content">
+                    <h2 class="step-title">Choose Your Tool Categories</h2>
+                    <p class="step-description">Select at least one category that interests you (multiple selections welcome!)</p>
+                    
+                    <div class="categories-grid">
+                        <div class="category-card" data-category="dev">
+                            <div class="category-emoji">💻</div>
+                            <h3 class="category-name">Dev Discoveries</h3>
+                            <p class="category-subtitle">Software Developers</p>
+                            <p class="category-description">Debuggers, CLI tools, APIs, code editors, Git helpers</p>
+                            <div class="category-selector">
+                                <input type="checkbox" id="cat-dev" value="dev">
+                                <div class="checkmark"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="category-card" data-category="design">
+                            <div class="category-emoji">🎨</div>
+                            <h3 class="category-name">Designers Drawer</h3>
+                            <p class="category-subtitle">UI/UX Designers</p>
+                            <p class="category-description">Wireframing, prototyping, collaboration, Figma plugins</p>
+                            <div class="category-selector">
+                                <input type="checkbox" id="cat-design" value="design">
+                                <div class="checkmark"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="category-card" data-category="product">
+                            <div class="category-emoji">📊</div>
+                            <h3 class="category-name">Product Picks</h3>
+                            <p class="category-subtitle">Product Managers / Builders</p>
+                            <p class="category-description">Roadmapping, analytics dashboards, collaboration SaaS</p>
+                            <div class="category-selector">
+                                <input type="checkbox" id="cat-product" value="product">
+                                <div class="checkmark"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="category-card" data-category="ops">
+                            <div class="category-emoji">⚙️</div>
+                            <h3 class="category-name">Ops Oasis</h3>
+                            <p class="category-subtitle">Ops / Workflow Efficiency</p>
+                            <p class="category-description">Automation tools, Zapier-style workflows, AI assistants</p>
+                            <div class="category-selector">
+                                <input type="checkbox" id="cat-ops" value="ops">
+                                <div class="checkmark"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="category-card" data-category="creators">
+                            <div class="category-emoji">🎬</div>
+                            <h3 class="category-name">Creator's Corner</h3>
+                            <p class="category-subtitle">For fun / creative makers</p>
+                            <p class="category-description">Video editors, AI art, music generators, meme tools</p>
+                            <div class="category-selector">
+                                <input type="checkbox" id="cat-creators" value="creators">
+                                <div class="checkmark"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="category-card" data-category="wildcard">
+                            <div class="category-emoji">🎲</div>
+                            <h3 class="category-name">Wildcard Wonders</h3>
+                            <p class="category-subtitle">Surprising, just-for-fun</p>
+                            <p class="category-description">Random quirky tools</p>
+                            <div class="category-selector">
+                                <input type="checkbox" id="cat-wildcard" value="wildcard">
+                                <div class="checkmark"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="error-message" id="categories-error"></div>
+                    
+                    <div class="step-actions">
+                        <button class="btn btn--outline" id="back-to-hero">← Back</button>
+                        <button class="btn btn--primary btn--lg" id="continue-to-days">Continue</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Day Selection Section -->
+        <section id="day-selection" class="step">
+            <div class="container">
+                <div class="step-content">
+                    <h2 class="step-title">Pick Your Weekly Delivery Day</h2>
+                    <p class="step-description">When would you like to receive your weekly tool discoveries?</p>
+                    
+                    <div class="days-grid">
+                        <div class="day-card" data-day="monday">
+                            <div class="day-emoji">😴</div>
+                            <div class="day-name">Monday</div>
+                            <input type="radio" name="day" value="monday" id="day-monday">
+                        </div>
+                        
+                        <div class="day-card" data-day="tuesday">
+                            <div class="day-emoji">😐</div>
+                            <div class="day-name">Tuesday</div>
+                            <input type="radio" name="day" value="tuesday" id="day-tuesday">
+                        </div>
+                        
+                        <div class="day-card" data-day="wednesday">
+                            <div class="day-emoji">😊</div>
+                            <div class="day-name">Wednesday</div>
+                            <input type="radio" name="day" value="wednesday" id="day-wednesday">
+                        </div>
+                        
+                        <div class="day-card" data-day="thursday">
+                            <div class="day-emoji">😃</div>
+                            <div class="day-name">Thursday</div>
+                            <input type="radio" name="day" value="thursday" id="day-thursday">
+                        </div>
+                        
+                        <div class="day-card" data-day="friday">
+                            <div class="day-emoji">🥳</div>
+                            <div class="day-name">Friday</div>
+                            <input type="radio" name="day" value="friday" id="day-friday">
+                        </div>
+                        
+                        <div class="day-card" data-day="saturday">
+                            <div class="day-emoji">😎</div>
+                            <div class="day-name">Saturday</div>
+                            <input type="radio" name="day" value="saturday" id="day-saturday">
+                        </div>
+                        
+                        <div class="day-card" data-day="sunday">
+                            <div class="day-emoji">😊</div>
+                            <div class="day-name">Sunday</div>
+                            <input type="radio" name="day" value="sunday" id="day-sunday">
+                        </div>
+                    </div>
+                    
+                    <div class="error-message" id="day-error"></div>
+                    
+                    <div class="step-actions">
+                        <button class="btn btn--outline" id="back-to-categories">← Back</button>
+                        <button class="btn btn--primary btn--lg" id="continue-to-email">Continue</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Email Input Section -->
+        <section id="email-input" class="step">
+            <div class="container">
+                <div class="step-content">
+                    <div class="email-celebration">
+                        <div class="celebration-emoji">🎯</div>
+                        <h2 class="step-title">Almost Done!</h2>
+                        <p class="step-description">You're so close to discovering amazing tools! Just one more step...</p>
+                    </div>
+                    
+
+                    <div class="email-section">
+                        <div class="form-group">
+                            <div class="email-input-wrapper">
+                                <span class="email-icon">📧</span>
+                                <input type="email" id="email" class="form-control email-input" placeholder="Enter your email address" required>
+                            </div>
+                            <div class="error-message" id="email-error"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="email-encouragement">
+                        <p class="encouragement-text">🚀 Ready to level up your tool game?</p>
+                    </div>
+                    
+                    <div class="step-actions">
+                        <button class="btn btn--outline" id="back-to-days">← Back</button>
+                        <button class="btn btn--primary btn--lg" id="subscribe-btn">🚀 Subscribe to ToolPlug</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Email Confirmation Section -->
+        <section id="email-confirmation" class="step">
+            <div class="container">
+                <div class="step-content">
+                    <div class="email-confirmation-celebration">
+                        <div class="confirmation-emoji">📧</div>
+                        <h2 class="step-title">Check Your Email (and check your spam folder too!)</h2>
+                        <p class="step-description">We've sent a confirmation email to <strong id="confirmation-email-display"></strong></p>
+                    </div>
+                    
+                    <div class="email-confirmation-message">
+                        <div class="confirmation-message-item">
+                            <span class="message-emoji">📬</span>
+                            <span class="message-text">Click the confirmation link in your email to complete your subscription</span>
+                        </div>
+                        <div class="confirmation-message-item">
+                            <span class="message-emoji">⏰</span>
+                            <span class="message-text">The link will expire in 24 hours</span>
+                        </div>
+                        <div class="confirmation-message-item">
+                            <span class="message-emoji">📱</span>
+                            <span class="message-text">Check your spam folder if you don't see it! + Make sure to check that email in the same browser!</span>
+                        </div>
+                    </div>
+                    
+                    <div class="email-confirmation-actions">
+                        <button class="btn btn--outline" id="back-to-email-input">← Back to Email</button>
+                        <button class="btn btn--primary btn--lg" id="resend-email">📧 Resend Email</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Confirmation Section -->
+        <section id="confirmation" class="step">
+            <div class="container">
+                <div class="confirmation-content">
+                    <div class="success-celebration">
+                        <div class="success-icon">🎉</div>
+                    </div>
+                    
+                    <h2 class="confirmation-title">Welcome to ToolPlug! 🎊</h2>
+                    <p class="confirmation-message">You're officially plugged into the future of tools! Get ready for weekly discoveries that'll supercharge your workflow.</p>
+                    
+                    <div class="subscription-summary">
+                        <h3>📋 Your Subscription Details:</h3>
+                        <div class="summary-item">
+                            <strong>📧 Email:</strong> <span id="summary-email"></span>
+                        </div>
+                        <div class="summary-item">
+                            <strong>🎨 Categories:</strong> <span id="summary-categories"></span>
+                        </div>
+                        <div class="summary-item">
+                            <strong>📅 Delivery Day:</strong> <span id="summary-day"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="final-encouragement">
+                        <p class="final-text"> Your tool discovery journey starts now!</p>
+                    </div>
+                    
+                    <div class="example-email-section">
+                        <p class="example-email-description">Use the button below to get an example email of the best product of the day.</p>
+                        <div class="confirmation-actions">
+                            <button class="btn btn--outline" id="get-example-email">📧 Daily Popular Product</button>
+                            <button class="btn btn--primary btn--lg" id="start-over"> Return to Home</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Progress Indicator -->
+        <div class="progress-indicator">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+            <div class="progress-steps">
+                <div class="progress-step active" data-step="1">1</div>
+                <div class="progress-step" data-step="2">2</div>
+                <div class="progress-step" data-step="3">3</div>
+                <div class="progress-step" data-step="4">4</div>
+                <div class="progress-step" data-step="5">5</div>
+                <div class="progress-step" data-step="6">6</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+
+    <!-- Wiring: correct subscribe flow + storage-based confirm + working "Back to Email" -->
+    
+</body>
+</html>

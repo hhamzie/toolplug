@@ -1,0 +1,17 @@
+pages_build_output_dir = "."
+
+name = "toolplug"
+compatibility_date = "2024-07-01"
+
+[ai]
+binding = "AI"          # matches env.AI in your worker
+
+[vars]
+DOMAIN = "toolplug.xyz" # used for sender/reply-to and confirm URL host fallback
+
+[[d1_databases]]
+binding = "DB"                              # must stay "DB" to match env.DB
+database_name = "toolplug_db"                  # use your actual D1 database name
+database_id = "a88946a8-4259-475b-bd7c-9fd497d3f7be"
+
+

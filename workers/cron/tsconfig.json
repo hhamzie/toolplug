@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+      "types": ["@cloudflare/workers-types"],   // <- key line
+      "module": "esnext",
+      "moduleResolution": "bundler",
+      "target": "es2022",
+      "strict": true
+    },
+    "include": ["src/**/*", "index.ts"]
+  }
+  
